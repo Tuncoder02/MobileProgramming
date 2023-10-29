@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="420dp"
+        android:layout_height="64dp"
+        android:background="#CA3B46"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:titleTextColor="@android:color/white"
+        tools:layout_editor_absoluteY="5dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_gravity="start|top"
+            android:contentDescription="Menu Icon"
+            android:src="@drawable/ic_menu"
+            app:contentDescription="Menu Icon" />
+
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+
+            android:layout_gravity="end|top"
+            android:contentDescription="Search Icon"
+            android:src="@drawable/ic_search"
+            app:contentDescription="Search Icon"
+            app:layout_collapseMode="pin" />
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inbox"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            android:layout_centerInParent="true" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/emailListView"
+        android:layout_width="426dp"
+        android:layout_height="664dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
